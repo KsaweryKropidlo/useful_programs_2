@@ -1,0 +1,271 @@
+\documentclass[9pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{lmodern}
+
+\usepackage[top=0.55cm,bottom=0.55cm,left=0.65cm,right=0.65cm]{geometry}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
+\emergencystretch=2em
+\raggedbottom
+
+\definecolor{navy}{HTML}{172A46}
+\definecolor{teal}{HTML}{167C80}
+\definecolor{gold}{HTML}{D39A3A}
+\definecolor{burgundy}{HTML}{7A304A}
+\definecolor{pale}{HTML}{F1F5F5}
+\definecolor{ink}{HTML}{27313D}
+\definecolor{muted}{HTML}{65717D}
+
+\newcommand{\cvsection}[2]{%
+  \vspace{0.40em}%
+  {\color{#1}\bfseries\fontsize{9.4}{10.6}\selectfont
+    \MakeUppercase{#2}\par}%
+  \vspace{0.06em}%
+  {\color{#1}\hrule height 0.7pt}%
+  \vspace{0.14em}%
+}
+
+\newcommand{\sideitem}[2]{%
+  {\color{navy}\bfseries #1}\par
+  {\color{ink}#2\par}
+  \vspace{0.13em}%
+}
+
+\newcommand{\cvbullet}[1]{%
+  \noindent{\color{gold}\textbullet}\hspace{0.42em}#1\par
+  \vspace{0.13em}%
+}
+
+\newcommand{\cventry}[4]{%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X
+                                  >{\raggedleft\arraybackslash}p{2.15cm}@{}}
+    {\fontsize{9}{10.2}\selectfont\bfseries\color{navy}#2} &
+    {\fontsize{8}{9.2}\selectfont\bfseries\color{teal}#1}
+  \end{tabularx}
+  {\fontsize{8.2}{9.4}\selectfont\itshape\color{burgundy}#3\par}
+  \vspace{0.06em}
+  {\fontsize{8.45}{9.9}\selectfont #4\par}
+  \vspace{0.17em}
+}
+
+\begin{document}
+\color{ink}
+
+% Nagłówek
+\noindent
+\colorbox{navy}{%
+  \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+    \vspace{0.34em}
+    {\fontsize{24}{26}\selectfont\bfseries\color{white} Józef Szwejk}
+    \hfill
+    {\fontsize{8.5}{10}\selectfont\bfseries\color{gold}
+      PROFIL GOŚCINNEGO PRELEGENTA}\par
+    \vspace{0.10em}
+    {\fontsize{9.2}{11}\selectfont\color{white}
+      Doświadczenia zwykłego człowieka jako żywy punkt wyjścia
+      do rozmowy o historii, społeczeństwie i literaturze}\par
+    \vspace{0.18em}
+    {\color{gold}\rule{\linewidth}{1.1pt}}\par
+    \vspace{0.20em}
+  }%
+}
+
+\vspace{0.26em}
+
+% Lewa kolumna
+\noindent
+\begin{minipage}[t]{0.295\textwidth}
+\vspace{0pt}
+
+\colorbox{pale}{%
+  \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep\relax}
+  \vspace{0.14em}
+  \raggedright
+  \fontsize{8.45}{9.9}\selectfont
+
+  \cvsection{teal}{W skrócie}
+  Praktyk, obserwator i gawędziarz. Dzięki doświadczeniu w handlu,
+  podróżach i służbie wojskowej potrafię opowiedzieć o wielkich
+  wydarzeniach z perspektywy ich codziennego wpływu na człowieka,
+  jego języka i zachowania.
+
+  Nie jestem badaczem akademickim, lecz kimś, kto doświadczał
+  instytucji od środka i potrafi przetłumaczyć abstrakcyjne pojęcia
+  na konkretne sytuacje, pytania i anegdoty.
+
+  \cvsection{teal}{Obszary tematyczne}
+  \cvbullet{codzienność monarchii austro-węgierskiej}
+  \cvbullet{wojsko, hierarchia i mechanizmy posłuszeństwa}
+  \cvbullet{biurokracja widziana od strony obywatela}
+  \cvbullet{humor jako sposób komentowania rzeczywistości}
+  \cvbullet{relacje jednostki z państwem i instytucją}
+  \cvbullet{język rozkazów i język potocznej rozmowy}
+  \cvbullet{praca, podróże i mobilność przed I wojną światową}
+
+  \cvsection{teal}{Atuty dla wykładowcy}
+  \cvbullet{barwne przykłady zamiast oderwanej abstrakcji}
+  \cvbullet{naturalne łączenie historii z literaturą i kulturą}
+  \cvbullet{zdolność interpretacji ludzkich reakcji i motywacji}
+  \cvbullet{spokój, elastyczność i dystans w trudnych sytuacjach}
+  \cvbullet{aktywizowanie słuchaczy przez pytania i anegdoty}
+  \cvbullet{kontakt z osobami o różnych doświadczeniach i statusach}
+
+  \cvsection{teal}{Języki}
+  \sideitem{Czeski}{Ojczysty, naturalny i potoczny}
+  \sideitem{Niemiecki}{Komunikatywny, również w służbie}
+  \sideitem{Węgierski}{Znajomość podstawowa}
+
+  \cvsection{teal}{Dane i kontakt}
+  \sideitem{Józef Szwejk}{Profil osoby oraz doświadczenie praktyczne}
+  Narodowość: czeska\\
+  Praga, ul. Bojiště 14\\
+  \href{mailto:jozef.szwejk@example.com}
+    {jozef.szwejk@example.com}
+
+  \cvsection{teal}{Poza służbą}
+  Kynologia, literatura, obserwowanie ludzkich charakterów,
+  marsze, życie gospód oraz opowiadanie zdarzeń z różnych epizodów życia.
+
+  \vspace{0.14em}
+  \end{minipage}%
+}
+
+\end{minipage}
+\hfill
+% Prawa kolumna
+\begin{minipage}[t]{0.685\textwidth}
+\vspace{0pt}
+\fontsize{8.55}{10}\selectfont
+
+\cvsection{navy}{Propozycja wykładu gościnnego}
+
+{\color{navy}\bfseries\fontsize{10.2}{11.5}\selectfont
+Wielka historia z perspektywy zwykłego człowieka}\par
+\vspace{0.07em}
+
+Jak opowiadać o epoce przez codzienne doświadczenia: rozkazy,
+podróże, rozmowy, pomyłki i spotkania z urzędami. Anegdota może
+stać się punktem wyjścia do dyskusji o władzy, języku, hierarchii,
+społecznym pochodzeniu i sposobach radzenia sobie z rzeczywistością.
+
+Spotkanie może łączyć krótką narrację z analizą sytuacji, interpretacją
+reakcji bohaterów i pytaniem o to, jaką wiedzę o epoce daje nam życie
+jednostki, a nie tylko dokument urzędowy czy oficjalne sprawozdanie.
+
+\cvsection{burgundy}{Doświadczenie zawodowe i społeczne}
+
+\cventry
+  {1914--1918}
+  {Służba w 91. Pułku Piechoty}
+  {Ordynans; bezpośredni kontakt z życiem wojskowym i administracją}
+  {Wykonywanie poleceń, przekazywanie meldunków i współpraca
+  z przełożonymi oraz żołnierzami o różnych pochodzeniach i doświadczeniach.
+  Widziałem, jak formalne rozkazy przechodzą przez codzienne relacje,
+  jak instytucja działa przez ludzi i jak techniczne polecenie
+  staje się źródłem nieporozumień, humoru lub nowych problemów.
+  Materiał ten pozwala omawiać dyscyplinę, strukturę, komunikację
+  oraz konflikt między procedurą a ludzką interpretacją.}
+
+\cventry
+  {1910--1914}
+  {Kynologiczny Instytut we współczesnej Pradze}
+  {Właściciel; handel, negocjacje i bezpośrednia obsługa klientów}
+  {Prowadzenie rozmów handlowych, rozpoznawanie oczekiwań klientów
+  i dobieranie sposobu prezentacji do konkretnego rozmówcy.
+  Doświadczenie to pozwala mówić o dawnym mieście jako miejscu pracy,
+  konsumpcji i codziennej komunikacji. Pokazuje także znaczenie
+  wyglądu, tonu głosu, uprzejmości i umiejętności obserwacji
+  w uzyskaniu zaufania.}
+
+\cvsection{burgundy}{Epizody jako materiał do analizy}
+
+\cventry
+  {1915}
+  {Marsz przez południowe Czechy}
+  {Samodzielne działanie w zmiennych warunkach}
+  {Poszukiwanie macierzystego pułku, orientacja w terenie i kontakt
+  z mieszkańcami. Epizod odsłania różnicę między formalnym celem
+  instytucji a doświadczeniem osoby próbującej go osiągnąć.
+  Można go wykorzystać do dyskusji o przestrzeni, mobilności,
+  informacjach niepełnych i sposobach podejmowania decyzji.}
+
+\cventry
+  {1914}
+  {Droga do garnizonu}
+  {Realizacja zadania w warunkach nieporozumienia i presji}
+  {Wydarzenia związane z Sarajewem wciągnęły zwykłego mieszkańca
+  Pragi w narrację wielkich wydarzeń. To przykład, jak przypadek,
+  interpretacja i nagłe podejście urzędowe mogą zmienić los jednostki.
+  Pomaga rozmowie o relacji między wojną a codziennym życiem.}
+
+\cvsection{teal}{Przebieg możliwego spotkania}
+
+\begin{tabularx}{\linewidth}{@{}>{\color{gold}\bfseries}p{0.75cm}
+                                  >{\raggedright\arraybackslash}X@{}}
+  1. & Krótka opowieść i osadzenie epizodu w realiach epoki\\
+  2. & Interpretacja zachowań, języka i struktur społecznych\\
+  3. & Porównanie doświadczenia jednostki z oficjalną narracją\\
+  4. & Zadania grupowe: pytania, alternatywny przebieg zdarzeń\\
+  5. & Dyskusja o człowieku, instytucji i odpowiedzialności
+\end{tabularx}
+
+\cvsection{navy}{Potencjalne tematy dla zajęć}
+
+{\fontsize{8.2}{9.6}\selectfont
+\textbf{Historia codzienności.}
+Jak wyglądają wielkie przemiany, gdy obserwuje się je z poziomu
+konkretnego człowieka, ulicy, gospody i garnizonu.
+
+\vspace{0.07em}
+\textbf{Literatura i świadomość społeczna.}
+Jak anegdota, humor i pozorna prostota narracji mogą ujawnić mechanizmy
+władzy, kulturę biurokracji i sposób postrzegania świata.
+
+\vspace{0.07em}
+\textbf{Władza i posłuszeństwo.}
+Jak rozkaz staje się praktyką społeczną oraz dlaczego jego wykonanie
+nie zawsze oznacza takie samo rozumienie polecenia.
+
+\vspace{0.07em}
+\textbf{Pamięć i interpretacja.}
+W jaki sposób doświadczenie jednostki uzupełnia źródła urzędowe
+i oficjalne relacje historyczne.
+}
+
+\cvsection{navy}{Przygotowanie i ograniczenia}
+
+Praktyczne doświadczenie handlowe, wojskowe i administracyjne.
+Nie deklaruję formalnego wykształcenia akademickiego ani statusu historyka.
+Moją propozycją jest perspektywa świadka i uczestnika, która może
+uzupełniać analizę wykładowcy, a nie zastępować źródła naukowe.
+Spotkanie można dostosować do tematyki zajęć, poziomu grupy
+i czasu przeznaczonego na dyskusję.
+
+\end{minipage}
+
+\vspace{0.14em}
+{\color{gold}\hrule height 1pt}
+\vspace{0.05em}
+
+\begin{center}
+  {\fontsize{7.1}{8.1}\selectfont\color{muted}
+    Józef Szwejk
+    \textbullet{} Praga
+    \textbullet{} Perspektywa świadka
+    \textbullet{} Opowieść i dyskusja}
+\end{center}
+
+\end{document}
